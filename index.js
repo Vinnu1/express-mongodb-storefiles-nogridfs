@@ -19,7 +19,7 @@ router.get("/download", (req, res) => {
 app.use(fileUpload())
 
 router.post("/upload", (req, res) => {
-    let file = { name: req.body.name, file: binary(req.files.uploadedFile.data) }
+    let file = { name: req.body.name, file: binary(req.files.uploadFile.data) }
     insertFile(file, res)
 })
 
